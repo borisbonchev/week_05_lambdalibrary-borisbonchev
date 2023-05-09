@@ -1,0 +1,22 @@
+= Demo of using maven dependency of other project
+Pieter van den Hombergh
+V1.0  2018-03-20
+:toc: right
+:icons: font
+:keywords: Maven dependency
+:source-highlighter: coderay
+
+toc::[]
+
+Show how maven dependency is added:
+
+. maven dependeny of csvobject reader.
+[source,xml]
+----
+  <dependency>
+      <groupId>nl.fontys.sebivenlo</groupId>
+      <artifactId>csvobjectstream</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <type>jar</type>
+ </dependency>
+----

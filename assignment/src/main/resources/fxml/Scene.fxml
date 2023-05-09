@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="root" 
+            prefHeight="768" prefWidth="1024" 
+            xmlns:fx="http://javafx.com/fxml" 
+            fx:controller="nl.fontys.sebivenlo.fxlambdalibrary.FXMLController">
+    <children>
+        <HBox>
+            <children>
+                <Label fx:id="label"/>
+                <TextField fx:id="searchTerm"/>
+            </children>
+        </HBox>
+        <TableView fx:id="tv"/>
+    </children>
+</AnchorPane>

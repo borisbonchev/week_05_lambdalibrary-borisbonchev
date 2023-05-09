@@ -1,0 +1,72 @@
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+:imagesdir: images/
+endif::[]
+
+:sectnums!:
+
+= Exercise LambdaLibrary
+
+Within this assignment you will get more familiar with the syntax of lambda expressions, as well as how to apply them.
+You will use the *streams* to get some work with collections done in a smart way.
+
+[NOTE]
+====
+Note: to run the FX application, don't click "run" in Netbeans. Assuming you are using a sebipom based project, then
+link:../2020/tips.html#_sebipom_and_java_fx[first enable the fx profile ^], then right click the project and either
+
+* select 'Run maven' and select exec _or_
+* in the Navigator, right-click the 'javafx run' entry and select 'execute goal'.
+====
+
+
+.The FX application works out of the box and you should not touch any of the FX parts. You will only work on the library itself.
+image::lambdalibrary.png[Screenshot of what the Lambda Library FX application looks like,role="related thumb left" ^]
+
+
+Your task is to implement the business logic for a library. This library
+      provides some methods to get access to the books and to retrieve several views
+      on that books. A simple swing-GUI which displays the books of the library is given.
+      You can use that to see parts of your implementation in action.
+
+As usually, you will find an NetBeans project for this assignment inserted in you subversion repository.
+Note that the project will run, but not all functionality is implemented, yet. Proceed in the following
+      steps:
+
+. Start working on this assignment by studying the Javadoc which is given.
+ Take especially care of the class `LibraryModel` since this will form the requirements you will have to implement.
+. Implement one of the test cases in the test class `LibraryModelTest`.
+ 	A good starting point is the `testGetBooks()` method.
+. Implement the method for which you wrote the test(s) in the previous step.
+** It may need more tests if a method has more aspects to fulfill. Each aspect could have a different test. +
+ It is quite common to have more test methods per business method.
+. Repeat the steps 2 and 3 until all functionality is implemented.
+
+Note that this task has a dependence on the previous task cvsobjects, to read a csv file
+as book objects.
+
+
+Additional information on lambda expressions and the java 8 features can be
+    found at the following locations:
+
+link:{apidocs}/lambdalibrary/index.html[javadoc of the application].
+This provides the requirements of all the methods to be tested and implemented. You can derive your test data from the `library.csv} file.
+
+*Update* The provided test class has two methods called book(int) and books(int ...), where the parameter is called id or ids. This could lead
+to confusion, when you interpret that as the id of the book in the csv file. It is not that number but simply the index in the List of books, so starts
+at 0, not 1.
+
+.Windows run script
+[source,cmd]
+----
+@echo off
+rem @author David Greven - https://github.com/grevend
+mvn -P fx javafx:run
+----
+
+
+# README
